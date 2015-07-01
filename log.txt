@@ -1,0 +1,26 @@
+2015-06-24: Downloaded data and started thinking
+
+Kaggle Crime ideas:
+
+Crime correlates with weather. Get weather data from the datetime stamp. I did this with bike sharing.
+What about economic indicators like unemployment and poverty rates?
+Can I find information about alcohol/drug consumption?
+How to handle location information? 
+demographic information of districts?
+Seasonal patterns?
+
+Wikipedia has an article on Statistical correlations of criminal behaviour:
+https://en.wikipedia.org/wiki/Statistical_correlations_of_criminal_behaviour
+
+Here is another interesting article:
+http://www.chicagomag.com/city-life/August-2014/What-Correlates-With-Crime-in-Chicago-Pt-2/
+
+There are major outliers in X and Y. Why are they there? SF crimes happening way outside SF? Must do outlier removal.
+
+2015-06-28
+
+Added functionality for downloading and using weather data and unemployment data. It didn't have an immediate impact on my log loss scores, but I will continue experimenting.
+
+The X and Y outliers appear to be arbitrary placeholders, probably because the intersections entered by police couldn't be found by the map software. I started manually adding the correct lattitude and longitude in and discovered that most are intersections where the street name changes before the intersection. There are only about a hundred cases in the testing set, out of nearly 900,000 crimes, so it is mostly unimportant.
+
+Upon closer inspection of the rules, external data is not allowed. So, I guess this will just be for fun.
